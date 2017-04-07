@@ -1,4 +1,4 @@
-#name of container: docker-zoneminder
+#name of container: docker-zm
 #versison of container: 0.0.1
 FROM phusion/baseimage:0.9.19
 LABEL maintainer Eliot Kent Woodrich "ekwoodrich@gmail.com"
