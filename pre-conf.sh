@@ -27,11 +27,11 @@ mysql -u root -pmysqlpsswd < /usr/share/zoneminder/db/zm_create.sql
 sleep 1s
 
 
-#mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = '/zm/cgi-bin/nph-zms' WHERE Name = 'ZM_PATH_ZMS';"
-#sleep 1s
-#mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = 1 WHERE Name = 'ZM_OPT_FFMPEG';"
-#sleep 1s
-#mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = '/usr/bin/ffmpeg' WHERE Name = 'ZM_PATH_FFMPEG';"
+mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = '/zm/cgi-bin/nph-zms' WHERE Name = 'ZM_PATH_ZMS';"
+sleep 1s
+mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = 1 WHERE Name = 'ZM_OPT_FFMPEG';"
+sleep 1s
+mysql -u root -pmysqlpsswd -D zm -e "UPDATE Config SET Value = '/usr/bin/ffmpeg' WHERE Name = 'ZM_PATH_FFMPEG';"
 
 #to fix error relate to ip address of container apache2
 echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf
