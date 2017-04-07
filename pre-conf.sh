@@ -44,6 +44,14 @@ chown -R www-data:www-data /usr/share/zoneminder/
 a2enmod rewrite
 adduser www-data video
 
+mkdir -p /usr/share/zoneminder/www/api/app/tmp/cache
+
+mkdir -p /usr/share/zoneminder/www/api/app/tmp/cache/persistent
+mkdir -p /usr/share/zoneminder/www/api/app/tmp/cache/models
+
+chown -R www-data:www-data chown /usr/share/zoneminder/www/api/app/tmp
+chmod -R 755 /usr/share/zoneminder/www/api/app/tmp/cache/persistent
+
 #to clear some data before saving this layer ...a docker image
 rm -R /var/www/html
 rm /etc/apache2/sites-enabled/000-default.conf
