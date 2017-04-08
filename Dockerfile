@@ -76,7 +76,7 @@ VOLUME /var/lib/mysql /var/cache/zoneminder
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server.
 EXPOSE 80
-
+EXPOSE 443
 
 
 
