@@ -10,7 +10,7 @@ Just run the Docker container with the command:
 
 The id of the container will be output to the terminal, which can be used to access a root shell for the Docker image:
 
-'''
+```
 ~/docker exec -it [container_id] /bin/bash
 ```
 
@@ -22,4 +22,4 @@ running
 '''
 
 
-Enjoy!
+##Enjoy!
