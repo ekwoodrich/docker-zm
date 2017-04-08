@@ -14,12 +14,12 @@ The id of the container will be output to the terminal, which can be used to acc
 ~/docker exec -it [container_id] /bin/bash
 ```
 
-e.g verify zoneminder is running:
+e.g to verify zoneminder is running:
 
-'''
+```
 ~/service zoneminder status
 running
-'''
+```
 
 
 ## Enjoy!
