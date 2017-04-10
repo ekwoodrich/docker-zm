@@ -50,8 +50,7 @@ mkdir -p /usr/share/zoneminder/www/api/app/tmp/cache/persistent
 mkdir -p /usr/share/zoneminder/www/api/app/tmp/cache/models
 
 chown -R www-data:www-data /usr/share/zoneminder/www/api/app/tmp
-
-chmod -R 755 /usr/share/zoneminder/www/api/app/tmp/cache/persistent
+chmod -R 755 /usr/share/zoneminder/www/api/app/tmp
 
 #to clear some data before saving this layer ...a docker image
 rm -R /var/www/html
@@ -59,6 +58,11 @@ rm /etc/apache2/sites-enabled/000-default.conf
 apt-get clean
 rm -rf /tmp/* /var/tmp/*
 rm -rf /var/lib/apt/lists/*
+make-ssl-cert generate-default-snakeoil --force-overwrite
+a2enmod ssl
+a2ensite default-ssl
+
+
 
 killall mysqld
 sleep 10s
